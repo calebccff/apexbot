@@ -40,7 +40,7 @@ async def save_json(obj, file):
     f.close()
 
 def start():
-    bot.run(open("token").read())
+    bot.run(open("token").readlines()[0])
 
 def get_fromid(obj, key, id):
     try:
