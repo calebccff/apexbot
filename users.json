@@ -113,9 +113,30 @@
     {
         "id": "220130923939758091",
         "nick": "Konvex",
-        "origin": "",
+        "origin": "konvex2000",
         "strikes": 0,
-        "stats": {}
+        "stats": {
+            "level": "56",
+            "kills": "772",
+            "legends": [
+                {
+                    "name": "Bangalore",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "772",
+                            "rank": "3,034"
+                        },
+                        {
+                            "name": "Revives",
+                            "value": "75",
+                            "rank": "83"
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "id": "202454046773084160",
@@ -498,6 +519,43 @@
     {
         "id": "380727436142313492",
         "nick": "Caiden_",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "548584138504929286",
+        "nick": "\u015bledZiu",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "188877504981893120",
+        "nick": "caleb",
+        "origin": "calebHasNoSkill",
+        "strikes": 0,
+        "stats": {
+            "level": "44",
+            "kills": "121",
+            "legends": [
+                {
+                    "name": "Lifeline",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "121",
+                            "rank": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "273467468104859649",
+        "nick": "\u015bledZiu",
         "origin": "",
         "strikes": 0,
         "stats": {}

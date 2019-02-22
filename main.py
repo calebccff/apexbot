@@ -38,7 +38,7 @@ async def spam_filter(message):
             await bot.send_message(message.channel, "Watch your profanity")
             await bot.http.delete_message(message.channel.id, message.id)
 def start():
-    bot.run(open("token").readline())
+    bot.run(open("token").readline()[:-1])
 
 async def users_loop():
     while True:
