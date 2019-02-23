@@ -202,16 +202,16 @@ async def on_message(message):
 @bot.command(pass_context=True)
 #add a user through their origin account
 async def link(ctx, originuser):
-    userid = ctx.message.author.id
-    users[get_fromid(users, "id", userid)]["origin"] = originuser
-    await bot.say("Updated your origin username "+ctx.message.author.name)
+    user = ctx.message.author
+    users[get_fromid(users, "id", user.id)]["origin"] = originuser
+    await bot.say("Updated your origin username "+user.name)
     platform = 5
-    mem = ctx.message.author
-    if objects["emotes"]["psn"]["role"] in [x.id for x in mem.roles]:
+    if objects["emotes"]["psn"]["role"] in [x.id for x in user.roles]:
         platform = 2
-    elif objects["emotes"]["xbox"]["role"] in [x.id for x in mem.roles]:
+    elif objects["emotes"]["xbox"]["role"] in [x.id for x in user.roles]:
         platform = 1
-    stats = await get_stats(originuser)
+    stats = await get_stats(originuser, platform)
+    await log("User "+user.name+" linked origin account")
     await update_stats(userid, stats)
 
 async def get_stats(user, platform):
@@ -270,10 +270,12 @@ async def add(ctx, arg):
         user = users[get_fromid(users, "id", arg[2:-1])]
     except TypeError:
         bot.say("Invalid parameter, make sure you @ the user you're trying to add")
+        return
     if user is None or user["origin"] == "":
         await bot.say("You forgot to @ them or they haven't added their origin account yet, go tell them off")
         return
     await bot.say("Make sure you're signed in to the Origin website...\nhttps://www.origin.com/gbr/en-us/search?searchString="+user["origin"])
+    await log("$add: "+ctx.message.author.name+" added "+user["nick"])
         
 
 @bot.command()
