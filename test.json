@@ -1,0 +1,397 @@
+{
+    "data": {
+        "id": "282c699d-3e4c-406f-9a7b-2c3280c2b38d",
+        "type": "player",
+        "children": [
+            {
+                "id": "legend_5",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Bloodhound",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/bloodhound-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 90.0,
+                        "percentile": 36.0,
+                        "rank": 16250,
+                        "displayValue": "90",
+                        "displayRank": "16,250"
+                    },
+                    {
+                        "metadata": {
+                            "key": "TimesPlacedtop3",
+                            "name": "Times Top 3",
+                            "categoryKey": "game",
+                            "categoryName": "Game",
+                            "isReversed": false
+                        },
+                        "value": 10.0,
+                        "percentile": 2.2,
+                        "rank": 1245,
+                        "displayValue": "10",
+                        "displayRank": "1,245"
+                    }
+                ]
+            },
+            {
+                "id": "legend_1",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Wraith",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-wraith.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/wraith-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 106.0,
+                        "percentile": 48.0,
+                        "rank": 33447,
+                        "displayValue": "106",
+                        "displayRank": "33,447"
+                    },
+                    {
+                        "metadata": {
+                            "key": "Finishers",
+                            "name": "Finishers",
+                            "categoryKey": "game",
+                            "categoryName": "Game",
+                            "isReversed": false
+                        },
+                        "value": 1.0,
+                        "percentile": 1.9,
+                        "rank": 1023,
+                        "displayValue": "1",
+                        "displayRank": "1,023"
+                    },
+                    {
+                        "metadata": {
+                            "key": "Specific3",
+                            "name": "Legend Specific 3",
+                            "categoryKey": "game",
+                            "categoryName": "Game",
+                            "isReversed": false
+                        },
+                        "value": 157.0,
+                        "percentile": 100.0,
+                        "rank": 2299,
+                        "displayValue": "157",
+                        "displayRank": "2,299"
+                    }
+                ]
+            },
+            {
+                "id": "legend_7",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Lifeline",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/lifeline-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 294.0,
+                        "percentile": 16.0,
+                        "rank": 6342,
+                        "displayValue": "294",
+                        "displayRank": "6,342"
+                    },
+                    {
+                        "metadata": {
+                            "key": "CarePackageKills",
+                            "name": "Care Package Kills",
+                            "categoryKey": "weapons",
+                            "categoryName": "Weapons",
+                            "isReversed": false
+                        },
+                        "value": 4.0,
+                        "percentile": 0.2,
+                        "rank": 98,
+                        "displayValue": "4",
+                        "displayRank": "98"
+                    }
+                ]
+            },
+            {
+                "id": "legend_3",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Caustic",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-caustic.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/caustic-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "SmgKills",
+                            "name": "SMG Kills",
+                            "categoryKey": "weapons",
+                            "categoryName": "Weapons",
+                            "isReversed": false
+                        },
+                        "value": 0.0,
+                        "rank": 96,
+                        "displayValue": "0",
+                        "displayRank": "96"
+                    }
+                ]
+            },
+            {
+                "id": "legend_6",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Gibraltar",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-gibraltar.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/gibraltar-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 1.0,
+                        "percentile": 76.0,
+                        "rank": 7463,
+                        "displayValue": "1",
+                        "displayRank": "7,463"
+                    }
+                ]
+            },
+            {
+                "id": "legend_2",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Bangalore",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/bangalore-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 232.0,
+                        "percentile": 22.0,
+                        "rank": 11814,
+                        "displayValue": "232",
+                        "displayRank": "11,814"
+                    },
+                    {
+                        "metadata": {
+                            "key": "KillsAsKillLeader",
+                            "name": "Kills As Kill Leader",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 38.0,
+                        "percentile": 2.4,
+                        "rank": 1262,
+                        "displayValue": "38",
+                        "displayRank": "1,262"
+                    }
+                ]
+            },
+            {
+                "id": "legend_4",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Mirage",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-mirage.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/mirage-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 167.0,
+                        "percentile": 23.0,
+                        "rank": 5570,
+                        "displayValue": "167",
+                        "displayRank": "5,570"
+                    }
+                ]
+            },
+            {
+                "id": "legend_8",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Pathfinder",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/pathfinder-concept-bg-small.jpg"
+                },
+                "stats": [
+                    {
+                        "metadata": {
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
+                            "isReversed": false
+                        },
+                        "value": 16.0,
+                        "percentile": 53.0,
+                        "rank": 14493,
+                        "displayValue": "16",
+                        "displayRank": "14,493"
+                    },
+                    {
+                        "metadata": {
+                            "key": "TimesPlacedtop3",
+                            "name": "Times Top 3",
+                            "categoryKey": "game",
+                            "categoryName": "Game",
+                            "isReversed": false
+                        },
+                        "value": 2.0,
+                        "percentile": 2.4,
+                        "rank": 652,
+                        "displayValue": "2",
+                        "displayRank": "652"
+                    }
+                ]
+            }
+        ],
+        "metadata": {
+            "statsCategoryOrder": [
+                "combat",
+                "game",
+                "weapons"
+            ],
+            "platformId": 5,
+            "platformUserHandle": "TankronX",
+            "accountId": "282c699d-3e4c-406f-9a7b-2c3280c2b38d",
+            "cacheExpireDate": "2/23/2019 1:09:38 PM",
+            "level": 58
+        },
+        "stats": [
+            {
+                "metadata": {
+                    "key": "Level",
+                    "name": "Level",
+                    "categoryKey": "combat",
+                    "categoryName": "Combat",
+                    "isReversed": false
+                },
+                "value": 58.0,
+                "percentile": 23.0,
+                "rank": 16459,
+                "displayValue": "58",
+                "displayRank": "16,459"
+            },
+            {
+                "metadata": {
+                    "key": "Kills",
+                    "name": "Kills",
+                    "categoryKey": "combat",
+                    "categoryName": "Combat",
+                    "isReversed": false
+                },
+                "value": 906.0,
+                "percentile": 14.0,
+                "rank": 7538,
+                "displayValue": "906",
+                "displayRank": "7,538"
+            },
+            {
+                "metadata": {
+                    "key": "KillsAsKillLeader",
+                    "name": "Kills As Kill Leader",
+                    "categoryKey": "combat",
+                    "categoryName": "Combat",
+                    "isReversed": false
+                },
+                "value": 38.0,
+                "percentile": 6.0,
+                "displayValue": "38",
+                "displayRank": ""
+            },
+            {
+                "metadata": {
+                    "key": "Finishers",
+                    "name": "Finishers",
+                    "categoryKey": "game",
+                    "categoryName": "Game",
+                    "isReversed": false
+                },
+                "value": 1.0,
+                "percentile": 3.2,
+                "displayValue": "1",
+                "displayRank": ""
+            },
+            {
+                "metadata": {
+                    "key": "TimesPlacedtop3",
+                    "name": "Times Top 3",
+                    "categoryKey": "game",
+                    "categoryName": "Game",
+                    "isReversed": false
+                },
+                "value": 12.0,
+                "percentile": 5.0,
+                "displayValue": "12",
+                "displayRank": ""
+            },
+            {
+                "metadata": {
+                    "key": "SmgKills",
+                    "name": "SMG Kills",
+                    "categoryKey": "weapons",
+                    "categoryName": "Weapons",
+                    "isReversed": false
+                },
+                "value": 0.0,
+                "displayValue": "0",
+                "displayRank": ""
+            },
+            {
+                "metadata": {
+                    "key": "CarePackageKills",
+                    "name": "Care Package Kills",
+                    "categoryKey": "weapons",
+                    "categoryName": "Weapons",
+                    "isReversed": false
+                },
+                "value": 4.0,
+                "percentile": 0.5,
+                "displayValue": "4",
+                "displayRank": ""
+            }
+        ]
+    }
+}

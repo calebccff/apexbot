@@ -25,7 +25,7 @@ async def on_ready():
     server = list(bot.servers)[0]
     logchannel = bot.get_channel(objects["channels"]["bot-log"])
     await get_messages()
-    await users_update()
+    bot.loop.create_task(users_update())
     bot.loop.create_task(users_loop())
     await bot.change_presence(game=discord.Game(name="with the mortals"))
     
@@ -41,34 +41,63 @@ def start():
     bot.run(open("token").readline()[:-1])
 
 async def users_loop():
-    while True:
-        for mem in server.members:
-            if (not mem.bot) and get_fromid(users, "id", mem.id) is not None and users[get_fromid(users, "id", mem.id)]["strikes"] > 3:
-                users[get_fromid(users, "id", mem.id)]["strikes"] = 0
-                print("Kicking user: "+mem.display_name)
-                await bot.send_message(mem, "cowabunga it is")
-                await bot.kick(mem)
-                await log(users[get_fromid(users, "id", mem.id)]["nick"]+" has been kicked for toxic behaviour")
-                return
+    while not bot.is_closed:
+        try:
+            for mem in server.members:
+                if not mem.bot and get_fromid(users, "id", mem.id) is not None:
+                    if not await check_strikes(mem):
+                        await update_ranks(mem)
+        except RuntimeError:
+            print("User joined while user_loop running")
+                        
         await save_json(users, "users") #ONLY time to save users, no need to do it multiple times
         await asyncio.sleep(1)
+
+async def check_strikes(mem):
+    user = users[get_fromid(users, "id", mem.id)]
+    if user["strikes"] > 3:
+        users[get_fromid(users, "id", mem.id)]["strikes"] = 0
+        print("Kicking user: "+mem.display_name)
+        await bot.send_message(mem, "cowabunga it is")
+        await bot.kick(mem)
+        await log(users[get_fromid(users, "id", mem.id)]["nick"]+" has been kicked for toxic behaviour")
+        return True
+    return False
+
+async def update_ranks(mem):
+    user = users[get_fromid(users, "id", mem.id)]
+    try:
+        elo = int(user["stats"]["elo"])
+    except KeyError: #User hasn't added stats
+        return
+    ranks = list(objects["roles"].values())[1:] #Skip first key as it's the admin role, get list of lists
+    for i in range(len(ranks)):
+        rank = ranks[i]
+        memranks = [r.id for r in mem.roles]
+        low = ranks[i-1][1] if i > 0 else 0 #Get the next elo down to prevent the bot from slowly ranking everyone up
+        if elo < rank[1] and elo > low and not rank[0] in memranks: #Ascending order, don't already have this rank
+            print("Making user "+mem.display_name+" rank "+discord.utils.get(server.roles, id=rank[0]).name)
+            for rid in [x[0] for x in ranks if x[0] in memranks]: #Every rank the user already has, will run when they change ranks
+                print("Removing rank "+discord.utils.get(server.roles, id=rid).name+" for "+mem.display_name)
+                await bot.remove_roles(mem, discord.utils.get(server.roles, id=rid))
+                await asyncio.sleep(0.15) #Smooth out the rate limiting
+            await bot.add_roles(mem, discord.utils.get(server.roles, id=rank[0]))
 
 async def users_update():
     global users
     await bot.wait_until_ready()
-    for mem in server.members:
-        if mem.bot:
-            continue
-        if get_fromid(users, "id", mem.id) is not None:
-            #print("Updating-"+str(n)+": "+mem.display_name)
-            users[get_fromid(users, "id", mem.id)]["nick"] = mem.display_name
-        else:
-            users.append({"id": mem.id, "nick": mem.display_name, "origin": "", "strikes": 0, "stats": {}})
-        #await asyncio.sleep(10)
+    while not bot.is_closed:
+        for mem in server.members:
+            if mem.bot:
+                continue
+            if get_fromid(users, "id", mem.id) is not None:
+                #print("Updating-"+str(n)+": "+mem.display_name)
+                users[get_fromid(users, "id", mem.id)]["nick"] = mem.display_name
+            else:
+                users.append({"id": mem.id, "nick": mem.display_name, "origin": "", "strikes": 0, "stats": {}})
+        await asyncio.sleep(3)
 
 async def handle_suggestion(message):
-    await bot.add_reaction(message, "\u2B06")
-    await bot.add_reaction(message, "\u2B07")
     suggestions.append({"id": message.id, "uid": message.author.id, "text": message.content, "up": 0, "down": 0})
     print(suggestions)
     await save_json(suggestions, "suggestions")
@@ -158,8 +187,10 @@ async def on_message(message):
     # if message.channel.is_private: #Do private channel things
     #     print("Message in private channel")
     #     return
+    if message.channel.id == objects["channels"]["suggestions"] or message.channel.id == objects["channels"]["suggestions"]:
+        await bot.add_reaction(message, "\u2B06")
+        await bot.add_reaction(message, "\u2B07")
     if message.channel.id == objects["channels"]["suggestions"]:
-        print("Suggestion message")
         await handle_suggestion(message)
     msg = message.content
     print(message.author.name+": "+msg)
@@ -174,21 +205,31 @@ async def link(ctx, originuser):
     userid = ctx.message.author.id
     users[get_fromid(users, "id", userid)]["origin"] = originuser
     await bot.say("Updated your origin username "+ctx.message.author.name)
+    platform = 5
+    mem = ctx.message.author
+    if objects["emotes"]["psn"]["role"] in [x.id for x in mem.roles]:
+        platform = 2
+    elif objects["emotes"]["xbox"]["role"] in [x.id for x in mem.roles]:
+        platform = 1
     stats = await get_stats(originuser)
     await update_stats(userid, stats)
 
-async def get_stats(user):
-    r=requests.get("https://public-api.tracker.gg/apex/v1/standard/profile/5/"+user, headers={"TRN-Api-Key": "62979e1c-f8bd-4fe9-a07e-ea9213155850"})
+async def get_stats(user, platform):
+    global ratelimitRemaining
+    #if ratelimitRemaining == 1
+    r=requests.get("https://public-api.tracker.gg/apex/v1/standard/profile/"+platform+"/"+user, headers={"TRN-Api-Key": "62979e1c-f8bd-4fe9-a07e-ea9213155850"})
+    ratelimitRemaining = int(r.headers["X-RateLimit-Remaining-minute"])
     try:
         data = r.json()["data"]
         print("Got data")
     except KeyError:
-        await bot.say("Error, try again, perhaps you failed to enter your OWN USERNAME properly, hmmm?")
-        return
+        await bot.say("Error, you're username is wrong or you haven't assigned yourself roles for console, check #welcome")
+        raise KeyError
     stats = data["stats"]
     stat = dict()
-    stat["level"] = str(stats[0]["displayValue"])
+    stat["level"] = stats[0]["displayValue"]
     stat["kills"] = stats[1]["displayValue"]
+    stat["elo"] = str(int(100*int(stat["kills"])/int(stat["level"])))
     stat["legends"] = []
     for legend in data["children"]:
         stat["legends"].append({
@@ -223,11 +264,14 @@ async def getsuggestions():
 
 @bot.command(pass_context=True)
 async def add(ctx, arg):
-    print(arg)
     await bot.send_typing(ctx.message.channel)
-    user = users[get_fromid(users, "id", arg[2:-1])]
+    user = None
+    try:
+        user = users[get_fromid(users, "id", arg[2:-1])]
+    except TypeError:
+        bot.say("Invalid parameter, make sure you @ the user you're trying to add")
     if user is None or user["origin"] == "":
-        await bot.say("Unfortunately, "+uname["nick"]+" hasn't added their origin account yet, go tell them off")
+        await bot.say("You forgot to @ them or they haven't added their origin account yet, go tell them off")
         return
     await bot.say("Make sure you're signed in to the Origin website...\nhttps://www.origin.com/gbr/en-us/search?searchString="+user["origin"])
         
@@ -278,19 +322,28 @@ async def stats(ctx):
     user = users[get_fromid(users, "id", ctx.message.author.id)]
     await bot.send_typing(ctx.message.channel)
     if user is None or user["origin"] == "":
-        await bot.say("You have to add your origin tag first - that's not very cash money of you")
+        await bot.say("You have to add your origin tag first - `$link` or check #using-the-bot")
         return
         
     await log("Getting stats for "+user["nick"])
+    platform = 5
+    mem = ctx.message.author
+    if objects["emotes"]["psn"]["role"] in [x.id for x in mem.roles]:
+        platform = 2
+    elif objects["emotes"]["xbox"]["role"] in [x.id for x in mem.roles]:
+        platform = 1
+    try:
+        stat = await get_stats(user["origin"], str(platform))
+    except KeyError:
+        await bot.say("Looks like the servers are down, try again later")
+    await update_stats(ctx.message.author.id, stat)
     stats = user["stats"]
 
-    stat = await get_stats(user["origin"])
-    await update_stats(ctx.message.author.id, stat)
-
-    embed=discord.Embed(title=user["nick"]+"'s Power Level", url="https://apex.tracker.gg/profile/pc/"+user["origin"], description="<Server Rank>", color=0xFA0A05)
+    embed=discord.Embed(title=user["nick"]+"'s Power Level", url="https://apex.tracker.gg/profile/pc/"+user["origin"], description="", color=0xFA0A05)
     embed.set_author(name=user["nick"])
     embed.add_field(name="Level", value=stats["level"], inline=True)
     embed.add_field(name="Kills", value=stats["kills"], inline=True)
+    embed.add_field(name="Elo", value=stats["elo"], inline=True)
     await bot.say(embed=embed)
 
     embed = discord.Embed(color=0xFA0A05)

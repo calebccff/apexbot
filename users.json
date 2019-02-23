@@ -2,44 +2,26 @@
     {
         "id": "421399841046790145",
         "nick": "Boolius Caesar",
-        "origin": "",
-        "strikes": 0,
-        "stats": {}
-    },
-    {
-        "id": "372341973966651393",
-        "nick": "GLUAGTUS",
-        "origin": "",
-        "strikes": 0,
-        "stats": {}
-    },
-    {
-        "id": "229355438301380610",
-        "nick": "KALUBE",
-        "origin": "calebccff",
+        "origin": "B00lius-Caesar",
         "strikes": 0,
         "stats": {
-            "level": "39",
-            "kills": "284",
+            "level": "59",
+            "kills": "723",
+            "elo": "1225",
             "legends": [
                 {
-                    "name": "Lifeline",
-                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
+                    "name": "Caustic",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-caustic.png.adapt.crop16x9.png",
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "50",
-                            "rank": "21,436"
+                            "value": "69",
+                            "rank": "2,180"
                         },
                         {
-                            "name": "Sniper Kills",
-                            "value": "6",
-                            "rank": ""
-                        },
-                        {
-                            "name": "Legend Specific 3",
-                            "value": "2,117",
-                            "rank": ""
+                            "name": "Legend Specific 2",
+                            "value": "44",
+                            "rank": "425"
                         }
                     ]
                 },
@@ -49,18 +31,68 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "1",
-                            "rank": "44,912"
+                            "value": "654",
+                            "rank": "4,991"
                         },
                         {
                             "name": "Kills As Kill Leader",
-                            "value": "0",
-                            "rank": "2,596"
+                            "value": "63",
+                            "rank": "1,575"
                         },
                         {
-                            "name": "Legend Specific 2",
-                            "value": "0",
-                            "rank": "1,855"
+                            "name": "Sniper Kills",
+                            "value": "41",
+                            "rank": "102"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "372341973966651393",
+        "nick": "GLUAGTUS",
+        "origin": "STAL1N_6IXTYNEIN",
+        "strikes": 0,
+        "stats": {
+            "level": "42",
+            "kills": "209",
+            "elo": "497",
+            "legends": [
+                {
+                    "name": "Pathfinder",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "1",
+                            "rank": "20,251"
+                        }
+                    ]
+                },
+                {
+                    "name": "Mirage",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-mirage.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "155",
+                            "rank": "6,272"
+                        },
+                        {
+                            "name": "Winning Kills",
+                            "value": "3.00",
+                            "rank": "162"
+                        },
+                        {
+                            "name": "Damage",
+                            "value": "52,724",
+                            "rank": "2,943"
+                        },
+                        {
+                            "name": "SMG Kills",
+                            "value": "12",
+                            "rank": "107"
                         }
                     ]
                 },
@@ -70,8 +102,112 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "67",
-                            "rank": "25,977"
+                            "value": "44",
+                            "rank": "30,283"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lifeline",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "9",
+                            "rank": "34,386"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "229355438301380610",
+        "nick": "KALUBE",
+        "origin": "calebccff",
+        "strikes": 0,
+        "stats": {
+            "level": "44",
+            "kills": "384",
+            "elo": "872",
+            "legends": [
+                {
+                    "name": "Bloodhound",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "21",
+                            "rank": "33,731"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wraith",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-wraith.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "5",
+                            "rank": "48,676"
+                        },
+                        {
+                            "name": "Kills As Kill Leader",
+                            "value": "0",
+                            "rank": "2,952"
+                        },
+                        {
+                            "name": "Legend Specific 2",
+                            "value": "3",
+                            "rank": "2,268"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bangalore",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "78",
+                            "rank": "27,800"
+                        }
+                    ]
+                },
+                {
+                    "name": "Gibraltar",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-gibraltar.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "7",
+                            "rank": "5,145"
+                        },
+                        {
+                            "name": "Sniper Kills",
+                            "value": "2",
+                            "rank": "54"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lifeline",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "50",
+                            "rank": "23,112"
+                        },
+                        {
+                            "name": "Sniper Kills",
+                            "value": "6",
+                            "rank": "337"
+                        },
+                        {
+                            "name": "Legend Specific 3",
+                            "value": "2,117",
+                            "rank": "3,215"
                         }
                     ]
                 },
@@ -81,29 +217,34 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "163",
-                            "rank": "2,424"
+                            "value": "210",
+                            "rank": "2,181"
                         },
                         {
                             "name": "Damage",
-                            "value": "46,121",
-                            "rank": "1,084"
+                            "value": "55,033",
+                            "rank": "1,065"
                         },
                         {
                             "name": "Legend Specific 2",
-                            "value": "534,234",
-                            "rank": "1,014"
+                            "value": "607,100",
+                            "rank": "1,169"
                         }
                     ]
                 },
                 {
-                    "name": "Bloodhound",
-                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "name": "Mirage",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-mirage.png.adapt.crop16x9.png",
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "3",
-                            "rank": "31,438"
+                            "value": "13",
+                            "rank": "19,248"
+                        },
+                        {
+                            "name": "Legend Specific 1",
+                            "value": "6",
+                            "rank": "2,701"
                         }
                     ]
                 }
@@ -116,8 +257,9 @@
         "origin": "konvex2000",
         "strikes": 0,
         "stats": {
-            "level": "56",
-            "kills": "772",
+            "level": "57",
+            "kills": "901",
+            "elo": "1580",
             "legends": [
                 {
                     "name": "Bangalore",
@@ -125,13 +267,67 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "772",
-                            "rank": "3,034"
+                            "value": "808",
+                            "rank": "2,803"
                         },
                         {
                             "name": "Revives",
                             "value": "75",
-                            "rank": "83"
+                            "rank": "85"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wraith",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-wraith.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "14",
+                            "rank": "44,929"
+                        },
+                        {
+                            "name": "LMG Kills",
+                            "value": "1",
+                            "rank": "481"
+                        }
+                    ]
+                },
+                {
+                    "name": "Lifeline",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "46",
+                            "rank": ""
+                        },
+                        {
+                            "name": "Headshots",
+                            "value": "62",
+                            "rank": "4,946"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pathfinder",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "12",
+                            "rank": "15,743"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bloodhound",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "21",
+                            "rank": "27,563"
                         }
                     ]
                 }
@@ -144,43 +340,28 @@
         "origin": "TankronX",
         "strikes": 0,
         "stats": {
-            "level": "53",
-            "kills": "811",
+            "level": "60",
+            "kills": "940",
+            "elo": "1566",
             "legends": [
-                {
-                    "name": "Pathfinder",
-                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
-                    "stats": [
-                        {
-                            "name": "Kills",
-                            "value": "16",
-                            "rank": ""
-                        },
-                        {
-                            "name": "TimesPlacedtop3",
-                            "value": "2",
-                            "rank": ""
-                        }
-                    ]
-                },
                 {
                     "name": "Wraith",
                     "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-wraith.png.adapt.crop16x9.png",
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "38",
-                            "rank": ""
+                            "value": "140",
+                            "rank": "27,346"
                         },
                         {
                             "name": "Finishers",
-                            "value": "0",
-                            "rank": ""
+                            "value": "1",
+                            "rank": "1,023"
                         },
                         {
-                            "name": "Specific3",
-                            "value": "70",
-                            "rank": ""
+                            "name": "Legend Specific 3",
+                            "value": "205",
+                            "rank": "2,299"
                         }
                     ]
                 },
@@ -191,12 +372,23 @@
                         {
                             "name": "Kills",
                             "value": "294",
-                            "rank": "4,869"
+                            "rank": "6,342"
                         },
                         {
-                            "name": "CarePackageKills",
+                            "name": "Care Package Kills",
                             "value": "4",
-                            "rank": "162"
+                            "rank": "98"
+                        }
+                    ]
+                },
+                {
+                    "name": "Caustic",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-caustic.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "SMG Kills",
+                            "value": "0",
+                            "rank": "96"
                         }
                     ]
                 },
@@ -207,7 +399,7 @@
                         {
                             "name": "Kills",
                             "value": "1",
-                            "rank": ""
+                            "rank": "7,463"
                         }
                     ]
                 },
@@ -218,12 +410,12 @@
                         {
                             "name": "Kills",
                             "value": "232",
-                            "rank": ""
+                            "rank": "13,584"
                         },
                         {
-                            "name": "KillsAsKillLeader",
+                            "name": "Kills As Kill Leader",
                             "value": "38",
-                            "rank": ""
+                            "rank": "1,262"
                         }
                     ]
                 },
@@ -234,7 +426,23 @@
                         {
                             "name": "Kills",
                             "value": "167",
-                            "rank": ""
+                            "rank": "5,570"
+                        }
+                    ]
+                },
+                {
+                    "name": "Pathfinder",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "16",
+                            "rank": "14,493"
+                        },
+                        {
+                            "name": "Times Top 3",
+                            "value": "2",
+                            "rank": "652"
                         }
                     ]
                 },
@@ -244,13 +452,13 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "63",
-                            "rank": ""
+                            "value": "90",
+                            "rank": "14,945"
                         },
                         {
-                            "name": "TimesPlacedtop3",
-                            "value": "7",
-                            "rank": ""
+                            "name": "Times Top 3",
+                            "value": "10",
+                            "rank": "1,245"
                         }
                     ]
                 }
@@ -351,16 +559,75 @@
     {
         "id": "192731197997056001",
         "nick": "Project-X-Panda",
-        "origin": "",
+        "origin": "Project-X-Panda",
         "strikes": 0,
-        "stats": {}
+        "stats": {
+            "level": "46",
+            "kills": "78",
+            "elo": "169",
+            "legends": [
+                {
+                    "name": "Pathfinder",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "78",
+                            "rank": ""
+                        },
+                        {
+                            "name": "Legend Specific 1",
+                            "value": "7",
+                            "rank": ""
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "id": "271733996579192832",
         "nick": "N017",
-        "origin": "",
+        "origin": "N0017",
         "strikes": 0,
-        "stats": {}
+        "stats": {
+            "level": "22",
+            "kills": "85",
+            "elo": "386",
+            "legends": [
+                {
+                    "name": "Bangalore",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "85",
+                            "rank": "29,496"
+                        },
+                        {
+                            "name": "Kills Per Match",
+                            "value": "1.35",
+                            "rank": ""
+                        },
+                        {
+                            "name": "Damage Per Match",
+                            "value": "431.17",
+                            "rank": ""
+                        },
+                        {
+                            "name": "Damage",
+                            "value": "27,164",
+                            "rank": ""
+                        },
+                        {
+                            "name": "Matches Played",
+                            "value": "63",
+                            "rank": ""
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "id": "330005929070297088",
@@ -428,9 +695,26 @@
     {
         "id": "229264089073975306",
         "nick": "Hofi109",
-        "origin": "",
+        "origin": "Hofi109",
         "strikes": 0,
-        "stats": {}
+        "stats": {
+            "level": "12",
+            "kills": "9",
+            "elo": "75",
+            "legends": [
+                {
+                    "name": "Bloodhound",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "9",
+                            "rank": ""
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "id": "543611218946949131",
@@ -456,9 +740,53 @@
     {
         "id": "251162952764358656",
         "nick": "The Local Dog Ion",
-        "origin": "",
+        "origin": "ionkille",
         "strikes": 0,
-        "stats": {}
+        "stats": {
+            "level": "37",
+            "kills": "256",
+            "elo": "691",
+            "legends": [
+                {
+                    "name": "Pathfinder",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-pathfinder.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "103",
+                            "rank": "6,378"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bloodhound",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "22",
+                            "rank": "24,057"
+                        },
+                        {
+                            "name": "LMG Kills",
+                            "value": "4",
+                            "rank": "221"
+                        }
+                    ]
+                },
+                {
+                    "name": "Wraith",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-wraith.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "131",
+                            "rank": "21,360"
+                        }
+                    ]
+                }
+            ]
+        }
     },
     {
         "id": "210909249461551104",
@@ -537,8 +865,20 @@
         "strikes": 0,
         "stats": {
             "level": "44",
-            "kills": "121",
+            "kills": "234",
+            "elo": "531",
             "legends": [
+                {
+                    "name": "Bangalore",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "113",
+                            "rank": ""
+                        }
+                    ]
+                },
                 {
                     "name": "Lifeline",
                     "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-lifeline.png.adapt.crop16x9.png",
@@ -556,6 +896,103 @@
     {
         "id": "273467468104859649",
         "nick": "\u015bledZiu",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "379007395839344650",
+        "nick": "TyGuyPie",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "544689406590582823",
+        "nick": "wigpig",
+        "origin": "wigpiggi",
+        "strikes": 0,
+        "stats": {
+            "level": "25",
+            "kills": "10",
+            "elo": "40",
+            "legends": [
+                {
+                    "name": "Mirage",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-mirage.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "10",
+                            "rank": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "152596534058287105",
+        "nick": "lordofduh",
+        "origin": "miqyu1rx9",
+        "strikes": 0,
+        "stats": {
+            "level": "8",
+            "kills": "0",
+            "elo": "0",
+            "legends": [
+                {
+                    "name": "Bloodhound",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "0",
+                            "rank": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "id": "548644250620002314",
+        "nick": "pinkmoodx",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "339655832847384576",
+        "nick": "JimmyBreeze",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "90890248401223680",
+        "nick": "SoEasy",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "387184514134179861",
+        "nick": "TryHardbro",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "500821507551920128",
+        "nick": "Coen",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "363751917995687936",
+        "nick": "Zetem00",
         "origin": "",
         "strikes": 0,
         "stats": {}
