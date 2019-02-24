@@ -19,6 +19,8 @@ bot.remove_command('help')
 server = None
 logchannel = None
 
+elo_params = {"offset": 3, "tilt": 0.7, "sag": 12}
+
 @bot.event
 async def on_ready():
     global server, logchannel
@@ -216,8 +218,10 @@ async def link(ctx, originuser):
     await update_stats(userid, stats)
 
 
+
 def calc_elo(level: int, kills: int):
-    elo = (3*kills)/pow(math.e, math.sqrt(0.7*level)/12)
+    global elo_params
+    elo = (elo_params["offset"]*kills)/pow(math.e, math.sqrt(elo_params["tilt"]*level)/elo_params["sag"])
     return str(int(elo))
 
 async def get_stats(user, platform):
@@ -289,6 +293,11 @@ async def refreshelo():
     for user in users:
         if len(user["stats"].keys()) > 0:
             user["stats"]["elo"] = calc_elo(int(user["stats"]["level"]), int(user["stats"]["kills"]))
+
+@bot.command()
+@commands.check(checks.is_admin)
+async def seteloparam(param, value):
+    elo_params[param] = value
 
 @bot.command()
 #$ping - sends pong
