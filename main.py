@@ -187,7 +187,7 @@ async def on_message(message):
     # if message.channel.is_private: #Do private channel things
     #     print("Message in private channel")
     #     return
-    if message.channel.id == objects["channels"]["suggestions"] or message.channel.id == objects["channels"]["suggestions"]:
+    if message.channel.id == objects["channels"]["suggestions"] or message.channel.id == objects["channels"]["announcements"]:
         await bot.add_reaction(message, "\u2B06")
         await bot.add_reaction(message, "\u2B07")
     if message.channel.id == objects["channels"]["suggestions"]:
