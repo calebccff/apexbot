@@ -297,7 +297,9 @@ async def getprop(user, prop):
 @commands.check(checks.is_admin)
 async def _eval(ctx, *, cmd):
     res = eval(cmd)
-    await bot.say("OUT: "+res)
+    print(res)
+    if res is not None:
+        await bot.say("OUT: "+res)
 
 @bot.command(pass_context=True)
 @commands.check(checks.is_admin)
