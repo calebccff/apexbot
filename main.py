@@ -193,7 +193,8 @@ async def on_message(message):
     if message.channel.id == objects["channels"]["suggestions"]:
         await handle_suggestion(message)
     msg = message.content
-    print(message.author.name+": "+msg)
+    print(message.author.name+": ", end="")
+    print(msg)
     if msg.startswith("$"):
         await bot.process_commands(message)
         return # Don't run spam filter on commands
