@@ -227,8 +227,8 @@ async def get_stats(user, platform):
         raise KeyError
     stats = data["stats"]
     stat = dict()
-    stat["level"] = stats[0]["displayValue"]
-    stat["kills"] = stats[1]["displayValue"]
+    stat["level"] = str(stats[0]["value"])
+    stat["kills"] = str(stats[1]["value"])
     stat["elo"] = str(int(100*int(stat["kills"])/int(stat["level"])))
     stat["legends"] = []
     for legend in data["children"]:
@@ -239,8 +239,8 @@ async def get_stats(user, platform):
         for st in legend["stats"]:
             stat["legends"][-1]["stats"].append({
                 "name": st["metadata"]["name"],
-                "value": st["displayValue"],
-                "rank": st["displayRank"]
+                "value": str(st["value"]),
+                "rank": str(st["rank"])
             })
     return stat
 
