@@ -300,10 +300,11 @@ async def refreshelo():
 @commands.check(checks.is_admin)
 async def seteloparam(param, value):
     try:
-        elo_params[param] = int(value)
+        elo_params[param] = float(value)
         save_json(config, "config")
-    except Exception:
+    except Exception as e:
         await bot.say("Failed, typo?")
+        await bot.log("```"+str(e)+"```")
         return
     await bot.say("Params are now: "+str(elo_params))
 
