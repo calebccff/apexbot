@@ -293,6 +293,11 @@ async def setprop(user, prop, value):
 async def getprop(user, prop):
     await bot.say(users[get_fromid(users, "id", user[2:-1])][prop])
 
+@bot.command(name="eval")
+@commands.check(checks.is_admin)
+async def _eval(cmd):
+    await bot.say(eval(cmd))
+
 @bot.command(pass_context=True)
 @commands.check(checks.is_admin)
 async def banword(ctx, word):
