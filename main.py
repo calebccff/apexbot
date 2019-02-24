@@ -290,7 +290,7 @@ async def add(ctx, arg):
 @bot.command()
 @commands.check(checks.is_admin)
 async def refreshelo():
-    log("Refreshing elo, params are: "+str(elo_params))
+    await log("Refreshing elo, params are: "+str(elo_params))
     for user in users:
         if len(user["stats"].keys()) > 0:
             user["stats"]["elo"] = calc_elo(int(user["stats"]["level"]), int(user["stats"]["kills"]))
