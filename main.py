@@ -216,7 +216,7 @@ async def link(ctx, originuser):
     await update_stats(userid, stats)
 
 
-def calc_elo(level, kills):
+def calc_elo(level: int, kills: int):
     elo = (3*kills)/pow(math.e, math.sqrt(0.7*level)/12)
     return str(int(elo))
 
@@ -287,7 +287,7 @@ async def add(ctx, arg):
 @commands.check(checks.is_admin)
 async def refreshelo():
     for user in users:
-        user["stats"]["elo"] = calc_elo(user["stats"]["level"], user["stats"]["kills"])
+        user["stats"]["elo"] = calc_elo(int(user["stats"]["level"]), int(user["stats"]["kills"]))
 
 @bot.command()
 #$ping - sends pong
