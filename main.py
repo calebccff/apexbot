@@ -293,14 +293,10 @@ async def setprop(user, prop, value):
 async def getprop(user, prop):
     await bot.say(users[get_fromid(users, "id", user[2:-1])][prop])
 
-@bot.command(name="eval", pass_context=True)
+@bot.command()
 @commands.check(checks.is_admin)
-async def _eval(ctx, *, cmd):
-    res = eval(cmd)
-    print(cmd)
-    print(res)
-    if res is not None:
-        await bot.say("OUT: "+res)
+async def getroles():
+    await bot.say("\n".join([r.name+": "+r.id for r in server.roles]))
 
 @bot.command(pass_context=True)
 @commands.check(checks.is_admin)
