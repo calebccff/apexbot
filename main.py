@@ -5,6 +5,7 @@ import requests
 import asyncio
 import json
 import checks
+import math
 from utils import *
 
 config = json.load(open("config.json"))
@@ -214,6 +215,11 @@ async def link(ctx, originuser):
     await log("User "+user.name+" linked origin account")
     await update_stats(userid, stats)
 
+
+def calc_elo(level, kills):
+    elo = (3*kills)/pow(math.e, math.sqrt(0.7*level)/12)
+    return str(int(elo))
+
 async def get_stats(user, platform):
     global ratelimitRemaining
     #if ratelimitRemaining == 1
@@ -229,7 +235,7 @@ async def get_stats(user, platform):
     stat = dict()
     stat["level"] = str(int(stats[0]["value"]))
     stat["kills"] = str(int(stats[1]["value"]))
-    stat["elo"] = str(int(100*int(stat["kills"])/int(stat["level"])))
+    stat["elo"] = calc_elo(int(stat["level"]), int(stat["kills"]))
     stat["legends"] = []
     for legend in data["children"]:
         stat["legends"].append({
@@ -277,6 +283,11 @@ async def add(ctx, arg):
     await bot.say("Make sure you're signed in to the Origin website...\nhttps://www.origin.com/gbr/en-us/search?searchString="+user["origin"])
     await log("$add: "+ctx.message.author.name+" added "+user["nick"])
         
+@bot.command()
+@commands.check(checks.is_admin)
+async def refreshelo():
+    for user in users:
+        user["stats"]["elo"] = calc_elo(user["stats"]["level"], user["stats"]["kills"])
 
 @bot.command()
 #$ping - sends pong
