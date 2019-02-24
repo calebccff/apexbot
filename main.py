@@ -240,7 +240,7 @@ async def get_stats(user, platform):
             stat["legends"][-1]["stats"].append({
                 "name": st["metadata"]["name"],
                 "value": str(st["value"]),
-                "rank": str(st["rank"])
+                "rank": st["displayRank"].replace(",", "")
             })
     return stat
 
