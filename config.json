@@ -2,7 +2,7 @@
     "owner": "229355438301380610",
     "prefix": "$",
     "description": "The allfather",
-    "elo_param": {
+    "elo_params": {
         "offset": 3.5,
         "tilt": 20,
         "sag": 0.7
