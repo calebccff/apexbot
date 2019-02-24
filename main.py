@@ -296,7 +296,7 @@ async def getprop(user, prop):
 @bot.command()
 @commands.check(checks.is_admin)
 async def getroles():
-    await bot.say("\n".join([r.name+": "+r.id for r in server.roles]))
+    await bot.say("\n".join([r.name.replace("@", "%")+": "+r.id for r in server.roles]))
 
 @bot.command(pass_context=True)
 @commands.check(checks.is_admin)
