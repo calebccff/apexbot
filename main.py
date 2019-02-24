@@ -286,8 +286,9 @@ async def add(ctx, arg):
 @bot.command()
 @commands.check(checks.is_admin)
 async def refreshelo():
-    for user in users if len(user["stats"].keys()) > 0:
-        user["stats"]["elo"] = calc_elo(int(user["stats"]["level"]), int(user["stats"]["kills"]))
+    for user in users:
+        if len(user["stats"].keys()) > 0:
+            user["stats"]["elo"] = calc_elo(int(user["stats"]["level"]), int(user["stats"]["kills"]))
 
 @bot.command()
 #$ping - sends pong
