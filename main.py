@@ -341,9 +341,9 @@ async def stats(ctx):
         platform = 1
     try:
         stat = await get_stats(user["origin"], str(platform))
-    except KeyError:
+    except KeyError as e:
         await bot.say("Looks like the servers are down, try again later")
-    print(stat)
+        print(e)
     await update_stats(ctx.message.author.id, stat)
     stats = user["stats"]
 

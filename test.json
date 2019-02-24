@@ -1,15 +1,15 @@
 {
     "data": {
-        "id": "282c699d-3e4c-406f-9a7b-2c3280c2b38d",
+        "id": "df216ac7-2499-4fee-bf5a-1ba31bb21231",
         "type": "player",
         "children": [
             {
-                "id": "legend_5",
+                "id": "legend_2",
                 "type": "",
                 "metadata": {
-                    "legend_name": "Bloodhound",
-                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
-                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/bloodhound-concept-bg-small.jpg"
+                    "legend_name": "Bangalore",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/bangalore-concept-bg-small.jpg"
                 },
                 "stats": [
                     {
@@ -20,25 +20,25 @@
                             "categoryName": "Combat",
                             "isReversed": false
                         },
-                        "value": 90.0,
-                        "percentile": 36.0,
-                        "rank": 16250,
-                        "displayValue": "90",
-                        "displayRank": "16,250"
+                        "value": 913.0,
+                        "percentile": 3.3,
+                        "rank": 2766,
+                        "displayValue": "913",
+                        "displayRank": "2,766"
                     },
                     {
                         "metadata": {
-                            "key": "TimesPlacedtop3",
-                            "name": "Times Top 3",
+                            "key": "Revives",
+                            "name": "Revives",
                             "categoryKey": "game",
                             "categoryName": "Game",
                             "isReversed": false
                         },
-                        "value": 10.0,
-                        "percentile": 2.2,
-                        "rank": 1245,
-                        "displayValue": "10",
-                        "displayRank": "1,245"
+                        "value": 85.0,
+                        "percentile": 0.2,
+                        "rank": 84,
+                        "displayValue": "85",
+                        "displayRank": "84"
                     }
                 ]
             },
@@ -59,39 +59,24 @@
                             "categoryName": "Combat",
                             "isReversed": false
                         },
-                        "value": 106.0,
-                        "percentile": 48.0,
-                        "rank": 33447,
-                        "displayValue": "106",
-                        "displayRank": "33,447"
+                        "value": 14.0,
+                        "percentile": 82.0,
+                        "displayValue": "14",
+                        "displayRank": ""
                     },
                     {
                         "metadata": {
-                            "key": "Finishers",
-                            "name": "Finishers",
-                            "categoryKey": "game",
-                            "categoryName": "Game",
+                            "key": "LmgKills",
+                            "name": "LMG Kills",
+                            "categoryKey": "weapons",
+                            "categoryName": "Weapons",
                             "isReversed": false
                         },
                         "value": 1.0,
-                        "percentile": 1.9,
-                        "rank": 1023,
+                        "percentile": 0.8,
+                        "rank": 543,
                         "displayValue": "1",
-                        "displayRank": "1,023"
-                    },
-                    {
-                        "metadata": {
-                            "key": "Specific3",
-                            "name": "Legend Specific 3",
-                            "categoryKey": "game",
-                            "categoryName": "Game",
-                            "isReversed": false
-                        },
-                        "value": 157.0,
-                        "percentile": 100.0,
-                        "rank": 2299,
-                        "displayValue": "157",
-                        "displayRank": "2,299"
+                        "displayRank": "543"
                     }
                 ]
             },
@@ -112,138 +97,25 @@
                             "categoryName": "Combat",
                             "isReversed": false
                         },
-                        "value": 294.0,
-                        "percentile": 16.0,
-                        "rank": 6342,
-                        "displayValue": "294",
-                        "displayRank": "6,342"
+                        "value": 46.0,
+                        "percentile": 55.0,
+                        "rank": 27503,
+                        "displayValue": "46",
+                        "displayRank": "27,503"
                     },
                     {
                         "metadata": {
-                            "key": "CarePackageKills",
-                            "name": "Care Package Kills",
-                            "categoryKey": "weapons",
-                            "categoryName": "Weapons",
-                            "isReversed": false
-                        },
-                        "value": 4.0,
-                        "percentile": 0.2,
-                        "rank": 98,
-                        "displayValue": "4",
-                        "displayRank": "98"
-                    }
-                ]
-            },
-            {
-                "id": "legend_3",
-                "type": "",
-                "metadata": {
-                    "legend_name": "Caustic",
-                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-caustic.png.adapt.crop16x9.png",
-                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/caustic-concept-bg-small.jpg"
-                },
-                "stats": [
-                    {
-                        "metadata": {
-                            "key": "SmgKills",
-                            "name": "SMG Kills",
-                            "categoryKey": "weapons",
-                            "categoryName": "Weapons",
-                            "isReversed": false
-                        },
-                        "value": 0.0,
-                        "rank": 96,
-                        "displayValue": "0",
-                        "displayRank": "96"
-                    }
-                ]
-            },
-            {
-                "id": "legend_6",
-                "type": "",
-                "metadata": {
-                    "legend_name": "Gibraltar",
-                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-gibraltar.png.adapt.crop16x9.png",
-                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/gibraltar-concept-bg-small.jpg"
-                },
-                "stats": [
-                    {
-                        "metadata": {
-                            "key": "Kills",
-                            "name": "Kills",
+                            "key": "Headshots",
+                            "name": "Headshots",
                             "categoryKey": "combat",
                             "categoryName": "Combat",
                             "isReversed": false
                         },
-                        "value": 1.0,
-                        "percentile": 76.0,
-                        "rank": 7463,
-                        "displayValue": "1",
-                        "displayRank": "7,463"
-                    }
-                ]
-            },
-            {
-                "id": "legend_2",
-                "type": "",
-                "metadata": {
-                    "legend_name": "Bangalore",
-                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
-                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/bangalore-concept-bg-small.jpg"
-                },
-                "stats": [
-                    {
-                        "metadata": {
-                            "key": "Kills",
-                            "name": "Kills",
-                            "categoryKey": "combat",
-                            "categoryName": "Combat",
-                            "isReversed": false
-                        },
-                        "value": 232.0,
-                        "percentile": 22.0,
-                        "rank": 11814,
-                        "displayValue": "232",
-                        "displayRank": "11,814"
-                    },
-                    {
-                        "metadata": {
-                            "key": "KillsAsKillLeader",
-                            "name": "Kills As Kill Leader",
-                            "categoryKey": "combat",
-                            "categoryName": "Combat",
-                            "isReversed": false
-                        },
-                        "value": 38.0,
-                        "percentile": 2.4,
-                        "rank": 1262,
-                        "displayValue": "38",
-                        "displayRank": "1,262"
-                    }
-                ]
-            },
-            {
-                "id": "legend_4",
-                "type": "",
-                "metadata": {
-                    "legend_name": "Mirage",
-                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-mirage.png.adapt.crop16x9.png",
-                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/mirage-concept-bg-small.jpg"
-                },
-                "stats": [
-                    {
-                        "metadata": {
-                            "key": "Kills",
-                            "name": "Kills",
-                            "categoryKey": "combat",
-                            "categoryName": "Combat",
-                            "isReversed": false
-                        },
-                        "value": 167.0,
-                        "percentile": 23.0,
-                        "rank": 5570,
-                        "displayValue": "167",
-                        "displayRank": "5,570"
+                        "value": 62.0,
+                        "percentile": 10.0,
+                        "rank": 5637,
+                        "displayValue": "62",
+                        "displayRank": "5,637"
                     }
                 ]
             },
@@ -264,25 +136,36 @@
                             "categoryName": "Combat",
                             "isReversed": false
                         },
-                        "value": 16.0,
-                        "percentile": 53.0,
-                        "rank": 14493,
-                        "displayValue": "16",
-                        "displayRank": "14,493"
-                    },
+                        "value": 12.0,
+                        "percentile": 58.0,
+                        "rank": 17624,
+                        "displayValue": "12",
+                        "displayRank": "17,624"
+                    }
+                ]
+            },
+            {
+                "id": "legend_5",
+                "type": "",
+                "metadata": {
+                    "legend_name": "Bloodhound",
+                    "icon": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "bgimage": "https://trackercdn.com/cdn/apex.tracker.gg/legends/bloodhound-concept-bg-small.jpg"
+                },
+                "stats": [
                     {
                         "metadata": {
-                            "key": "TimesPlacedtop3",
-                            "name": "Times Top 3",
-                            "categoryKey": "game",
-                            "categoryName": "Game",
+                            "key": "Kills",
+                            "name": "Kills",
+                            "categoryKey": "combat",
+                            "categoryName": "Combat",
                             "isReversed": false
                         },
-                        "value": 2.0,
-                        "percentile": 2.4,
-                        "rank": 652,
-                        "displayValue": "2",
-                        "displayRank": "652"
+                        "value": 21.0,
+                        "percentile": 67.0,
+                        "rank": 30963,
+                        "displayValue": "21",
+                        "displayRank": "30,963"
                     }
                 ]
             }
@@ -294,10 +177,10 @@
                 "weapons"
             ],
             "platformId": 5,
-            "platformUserHandle": "TankronX",
-            "accountId": "282c699d-3e4c-406f-9a7b-2c3280c2b38d",
-            "cacheExpireDate": "2/23/2019 1:09:38 PM",
-            "level": 58
+            "platformUserHandle": "konvex2000",
+            "accountId": "df216ac7-2499-4fee-bf5a-1ba31bb21231",
+            "cacheExpireDate": "2/24/2019 6:08:52 PM",
+            "level": 62
         },
         "stats": [
             {
@@ -308,11 +191,11 @@
                     "categoryName": "Combat",
                     "isReversed": false
                 },
-                "value": 58.0,
-                "percentile": 23.0,
-                "rank": 16459,
-                "displayValue": "58",
-                "displayRank": "16,459"
+                "value": 62.0,
+                "percentile": 20.0,
+                "rank": 18918,
+                "displayValue": "62",
+                "displayRank": "18,918"
             },
             {
                 "metadata": {
@@ -322,74 +205,36 @@
                     "categoryName": "Combat",
                     "isReversed": false
                 },
-                "value": 906.0,
-                "percentile": 14.0,
-                "rank": 7538,
-                "displayValue": "906",
-                "displayRank": "7,538"
+                "value": 1006.0,
+                "percentile": 12.0,
+                "rank": 8572,
+                "displayValue": "1,006",
+                "displayRank": "8,572"
             },
             {
                 "metadata": {
-                    "key": "KillsAsKillLeader",
-                    "name": "Kills As Kill Leader",
-                    "categoryKey": "combat",
-                    "categoryName": "Combat",
+                    "key": "Revives",
+                    "name": "Revives",
+                    "categoryKey": "game",
+                    "categoryName": "Game",
                     "isReversed": false
                 },
-                "value": 38.0,
-                "percentile": 6.0,
-                "displayValue": "38",
+                "value": 85.0,
+                "percentile": 0.8,
+                "displayValue": "85",
                 "displayRank": ""
             },
             {
                 "metadata": {
-                    "key": "Finishers",
-                    "name": "Finishers",
-                    "categoryKey": "game",
-                    "categoryName": "Game",
+                    "key": "LmgKills",
+                    "name": "LMG Kills",
+                    "categoryKey": "weapons",
+                    "categoryName": "Weapons",
                     "isReversed": false
                 },
                 "value": 1.0,
-                "percentile": 3.2,
+                "percentile": 2.3,
                 "displayValue": "1",
-                "displayRank": ""
-            },
-            {
-                "metadata": {
-                    "key": "TimesPlacedtop3",
-                    "name": "Times Top 3",
-                    "categoryKey": "game",
-                    "categoryName": "Game",
-                    "isReversed": false
-                },
-                "value": 12.0,
-                "percentile": 5.0,
-                "displayValue": "12",
-                "displayRank": ""
-            },
-            {
-                "metadata": {
-                    "key": "SmgKills",
-                    "name": "SMG Kills",
-                    "categoryKey": "weapons",
-                    "categoryName": "Weapons",
-                    "isReversed": false
-                },
-                "value": 0.0,
-                "displayValue": "0",
-                "displayRank": ""
-            },
-            {
-                "metadata": {
-                    "key": "CarePackageKills",
-                    "name": "Care Package Kills",
-                    "categoryKey": "weapons",
-                    "categoryName": "Weapons",
-                    "isReversed": false
-                },
-                "value": 4.0,
-                "percentile": 0.5,
-                "displayValue": "4",
                 "displayRank": ""
             }
         ]
