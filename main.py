@@ -210,7 +210,7 @@ async def link(ctx, originuser):
         platform = 2
     elif objects["emotes"]["xbox"]["role"] in [x.id for x in user.roles]:
         platform = 1
-    stats = await get_stats(originuser, platform)
+    stats = await get_stats(originuser, str(platform))
     await log("User "+user.name+" linked origin account")
     await update_stats(userid, stats)
 
