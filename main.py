@@ -19,7 +19,7 @@ bot.remove_command('help')
 server = None
 logchannel = None
 
-elo_params = {"offset": 3, "tilt": 0.7, "sag": 12}
+elo_params = config["elo_params"]
 
 @bot.event
 async def on_ready():
@@ -294,11 +294,19 @@ async def refreshelo():
     for user in users:
         if len(user["stats"].keys()) > 0:
             user["stats"]["elo"] = calc_elo(int(user["stats"]["level"]), int(user["stats"]["kills"]))
+    await bot.say("Recalculated elo for all users")
 
 @bot.command()
 @commands.check(checks.is_admin)
 async def seteloparam(param, value):
-    elo_params[param] = value
+    try:
+        elo_params[param] = int(value)
+        save_json(config, "config")
+    except Exception:
+        await bot.say("Failed, typo?")
+        return
+    await bot.say("Params are now: "+str(elo_params))
+
 
 @bot.command()
 #$ping - sends pong

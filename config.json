@@ -1,5 +1,10 @@
 {
     "owner": "229355438301380610",
     "prefix": "$",
-    "description": "The allfather"
+    "description": "The allfather",
+    "elo_param": {
+        "offset": 3.5,
+        "tilt": 20,
+        "sag": 0.7
+    }
 }
