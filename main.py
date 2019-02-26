@@ -46,14 +46,16 @@ def start():
 async def users_loop():
     while not bot.is_closed:
         try:
+            validmems = []
             for mem in server.members:
                 if not mem.bot and get_fromid(users, "id", mem.id) is not None:
-                    if not await check_strikes(mem):
-                        await update_ranks(mem)
+                    if not check_strikes(mem):
+                        validmems.append(mem)
+            await update_ranks(validmems)
         except RuntimeError:
             print("User joined while user_loop running")
                         
-        await save_json(users, "users") #ONLY time to save users, no need to do it multiple times
+        save_json(users, "users") #ONLY time to save users, no need to do it multiple times
         await asyncio.sleep(1)
 
 async def check_strikes(mem):
@@ -67,24 +69,29 @@ async def check_strikes(mem):
         return True
     return False
 
-async def update_ranks(mem):
-    user = users[get_fromid(users, "id", mem.id)]
-    try:
-        elo = int(user["stats"]["elo"])
-    except KeyError: #User hasn't added stats
-        return
+async def update_ranks(mems):
+    
+    
     ranks = list(objects["roles"].values())[1:] #Skip first key as it's the admin role, get list of lists
-    for i in range(len(ranks)):
-        rank = ranks[i]
-        memranks = [r.id for r in mem.roles]
-        low = ranks[i-1][1] if i > 0 else 0 #Get the next elo down to prevent the bot from slowly ranking everyone up
-        if elo < rank[1] and elo > low and not rank[0] in memranks: #Ascending order, don't already have this rank
-            print("Making user "+mem.display_name+" rank "+discord.utils.get(server.roles, id=rank[0]).name)
-            for rid in [x[0] for x in ranks if x[0] in memranks]: #Every rank the user already has, will run when they change ranks
-                print("Removing rank "+discord.utils.get(server.roles, id=rid).name+" for "+mem.display_name)
-                await bot.remove_roles(mem, discord.utils.get(server.roles, id=rid))
-                await asyncio.sleep(0.15) #Smooth out the rate limiting
-            await bot.add_roles(mem, discord.utils.get(server.roles, id=rank[0]))
+    rankedusers = dict()
+    for mem in mems:
+        user = users[get_fromid(users, "id", mem.id)]
+        try:
+            elo = int(user["stats"]["elo"])
+        except KeyError: #User hasn't added stats
+            continue
+        rankedusers.appen({"id": user["id"], "elo": elo})
+    # for i in range(len(ranks)):
+    #     rank = ranks[i]
+    #     memranks = [r.id for r in mem.roles]
+    #     low = ranks[i-1][1] if i > 0 else 0 #Get the next elo down to prevent the bot from slowly ranking everyone up
+    #     if elo < rank[1] and elo > low and not rank[0] in memranks: #Ascending order, don't already have this rank
+    #         print("Making user "+mem.display_name+" rank "+discord.utils.get(server.roles, id=rank[0]).name)
+    #         for rid in [x[0] for x in ranks if x[0] in memranks]: #Every rank the user already has, will run when they change ranks
+    #             print("Removing rank "+discord.utils.get(server.roles, id=rid).name+" for "+mem.display_name)
+    #             await bot.remove_roles(mem, discord.utils.get(server.roles, id=rid))
+    #             await asyncio.sleep(0.15) #Smooth out the rate limiting
+    #         await bot.add_roles(mem, discord.utils.get(server.roles, id=rank[0]))
 
 async def users_update():
     global users
@@ -94,7 +101,7 @@ async def users_update():
             if mem.bot:
                 continue
             if get_fromid(users, "id", mem.id) is not None:
-                #print("Updating-"+str(n)+": "+mem.display_name)
+                await log("Updating-"+str(n)+": "+mem.display_name)
                 users[get_fromid(users, "id", mem.id)]["nick"] = mem.display_name
             else:
                 users.append({"id": mem.id, "nick": mem.display_name, "origin": "", "strikes": 0, "stats": {}})
@@ -103,7 +110,7 @@ async def users_update():
 async def handle_suggestion(message):
     suggestions.append({"id": message.id, "uid": message.author.id, "text": message.content, "up": 0, "down": 0})
     print(suggestions)
-    await save_json(suggestions, "suggestions")
+    save_json(suggestions, "suggestions")
 
 async def get_messages():
     mid = objects["messages"]["rolepick"]
@@ -116,7 +123,7 @@ async def get_messages():
         except discord.errors.NotFound:
             print("Suggestion gone")
             del suggestions[get_fromid(suggestions, "id", sid)] #That suggestion is gone or too old
-    await save_json(suggestions, "suggestions")
+    save_json(suggestions, "suggestions")
     try:
         message = await bot.get_message(server.get_channel(objects["channels"]["welcome"]), mid)
         bot.messages.append(message)
@@ -140,7 +147,7 @@ async def on_reaction_add(reaction, user):
         else:
             #remove reaction
             await bot.remove_reaction(message, emote, user)
-        await save_json(suggestions, "suggestions")
+        save_json(suggestions, "suggestions")
         return
     
     if message.id == objects["messages"]["rolepick"]:
@@ -167,7 +174,7 @@ async def on_reaction_remove(reaction, user):
             suggestions[get_fromid(suggestions, "id", message.id)]["down"] -= 1
         else:
             await bot.remove_reaction(message, emote, user)
-        await save_json(suggestions, "suggestions")
+        save_json(suggestions, "suggestions")
         return
     if type(emote) is discord.Emoji and message.id == objects["messages"]["rolepick"]:
         await log("Removing role "+emote.name+" from "+user.display_name)
@@ -180,7 +187,7 @@ async def on_message(message):
     if message.author.bot:
         if message.channel.id == objects["channels"]["welcome"]:
             objects["messages"]["rolepick"] = message.id
-            await save_json(objects, "objects")
+            save_json(objects, "objects")
             print(message.content)
             for emote in server.emojis:
                 if emote.id in [x["id"] for x in list(objects["emotes"].values())]:
@@ -221,7 +228,8 @@ async def link(ctx, originuser):
 
 def calc_elo(level: int, kills: int):
     global elo_params
-    elo = (elo_params["offset"]*kills)/pow(math.e, math.sqrt(elo_params["tilt"]*level)/elo_params["sag"])
+    elo = (100*kills)/level
+    #elo = (elo_params["offset"]*kills)/math.sqrt(elo_params["tilt"]*pow(level, elo_params["sag"]))
     return str(int(elo))
 
 async def get_stats(user, platform):
@@ -240,6 +248,7 @@ async def get_stats(user, platform):
     stat["level"] = str(int(stats[0]["value"]))
     stat["kills"] = str(int(stats[1]["value"]))
     stat["elo"] = calc_elo(int(stat["level"]), int(stat["kills"]))
+    await log("DEBUG: "+"kills: "+stat["kills"]+", level: "+stat["level"]+", calculated elo: "+stat["elo"])
     stat["legends"] = []
     for legend in data["children"]:
         stat["legends"].append({
@@ -322,7 +331,7 @@ async def setprop(user, prop, value):
 @bot.command()
 @commands.check(checks.is_admin) #If user had mod roles
 async def getprop(user, prop):
-    await bot.say(users[get_fromid(users, "id", user[2:-1])][prop])
+    await bot.say(str(users[get_fromid(users, "id", user[2:-1])][prop]))
 
 @bot.command()
 @commands.check(checks.is_admin)
@@ -408,4 +417,3 @@ async def log(msg):
 
 if __name__ == "__main__":
     start()
-    
