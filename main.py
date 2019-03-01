@@ -80,7 +80,8 @@ async def update_ranks(mems):
             elo = int(user["stats"]["elo"])
         except KeyError: #User hasn't added stats
             continue
-        rankedusers.appen({"id": user["id"], "elo": elo})
+        rankedusers.append({"id": user["id"], "elo": elo})
+    
     # for i in range(len(ranks)):
     #     rank = ranks[i]
     #     memranks = [r.id for r in mem.roles]
