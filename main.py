@@ -49,9 +49,9 @@ async def users_loop():
             validmems = []
             for mem in server.members:
                 if not mem.bot and get_fromid(users, "id", mem.id) is not None:
-                    if not check_strikes(mem):
+                    if not await check_strikes(mem):
                         validmems.append(mem)
-            await update_ranks(validmems)
+            #await update_ranks(validmems)
         except RuntimeError:
             print("User joined while user_loop running")
                         
@@ -70,10 +70,8 @@ async def check_strikes(mem):
     return False
 
 async def update_ranks(mems):
-    
-    
     ranks = list(objects["roles"].values())[1:] #Skip first key as it's the admin role, get list of lists
-    rankedusers = dict()
+    rankedusers = []
     for mem in mems:
         user = users[get_fromid(users, "id", mem.id)]
         try:
@@ -81,6 +79,22 @@ async def update_ranks(mems):
         except KeyError: #User hasn't added stats
             continue
         rankedusers.append({"id": user["id"], "elo": elo})
+    count = len(rankedusers)
+    rankedusers.sort(key=lambda u: u["elo"], reverse=True)
+    percents = [r[1]/100 for r in ranks]
+    for i in range(len(percents)):
+        for j in range(math.floor(count*(percents[i-1] if i > 0 else 0)), math.floor(count*percents[i])):
+            mem = discord.utils.get(server.members, id=rankedusers[j]["id"])
+            memranks = [r.id for r in mem.roles]
+            for rid in [x[0] for x in ranks if x[0] in memranks]: #Every rank the user already has, will run when they change ranks
+                print("Removing rank "+discord.utils.get(server.roles, id=rid).name+" for "+mem.display_name)
+                await bot.remove_roles(mem, discord.utils.get(server.roles, id=rid))
+                await asyncio.sleep(0.15) #Smooth out the rate limiting
+            newrank = discord.utils.get(server.roles, id=ranks[i][0])
+            print("Adding rank "+newrank.name+" for "+mem.display_name)
+            bot.add_roles(mem, newrank)
+
+
 
 async def users_update():
     global users
@@ -90,7 +104,6 @@ async def users_update():
             if mem.bot:
                 continue
             if get_fromid(users, "id", mem.id) is not None:
-                await log("Updating-"+str(n)+": "+mem.display_name)
                 users[get_fromid(users, "id", mem.id)]["nick"] = mem.display_name
             else:
                 users.append({"id": mem.id, "nick": mem.display_name, "origin": "", "strikes": 0, "stats": {}})
@@ -213,11 +226,10 @@ async def link(ctx, originuser):
     await log("User "+user.name+" linked origin account")
     await update_stats(userid, stats)
 
-
-
 def calc_elo(level: int, kills: int):
     global elo_params
-    await log("Kills: "+str(kills)+" Level: "+str(level))
+
+    #await log("Kills: "+str(kills)+" Level: "+str(level))
     
     elo = (100*kills)/level
     print("ELo: "+str(elo))

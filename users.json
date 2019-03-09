@@ -51,7 +51,7 @@
     },
     {
         "id": "372341973966651393",
-        "nick": "GLUAGTUS",
+        "nick": "EEKAJ",
         "origin": "STAL1N_6IXTYNEIN",
         "strikes": 0,
         "stats": {
@@ -127,18 +127,18 @@
         "origin": "calebccff",
         "strikes": 0,
         "stats": {
-            "level": "44",
-            "kills": "384",
-            "elo": "872",
+            "level": "57",
+            "kills": "515",
+            "elo": "903",
             "legends": [
                 {
-                    "name": "Bloodhound",
-                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "name": "Bangalore",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "21",
-                            "rank": "33,731"
+                            "value": "101.0",
+                            "rank": ""
                         }
                     ]
                 },
@@ -148,29 +148,18 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "5",
-                            "rank": "48,676"
+                            "value": "5.0",
+                            "rank": ""
                         },
                         {
                             "name": "Kills As Kill Leader",
-                            "value": "0",
-                            "rank": "2,952"
+                            "value": "0.0",
+                            "rank": "8164"
                         },
                         {
                             "name": "Legend Specific 2",
-                            "value": "3",
-                            "rank": "2,268"
-                        }
-                    ]
-                },
-                {
-                    "name": "Bangalore",
-                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bangalore.png.adapt.crop16x9.png",
-                    "stats": [
-                        {
-                            "name": "Kills",
-                            "value": "78",
-                            "rank": "27,800"
+                            "value": "3.0",
+                            "rank": "9586"
                         }
                     ]
                 },
@@ -180,13 +169,13 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "7",
-                            "rank": "5,145"
+                            "value": "7.0",
+                            "rank": "14691"
                         },
                         {
                             "name": "Sniper Kills",
-                            "value": "2",
-                            "rank": "54"
+                            "value": "2.0",
+                            "rank": "152"
                         }
                     ]
                 },
@@ -196,18 +185,18 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "50",
-                            "rank": "23,112"
+                            "value": "120.0",
+                            "rank": "49480"
                         },
                         {
                             "name": "Sniper Kills",
-                            "value": "6",
-                            "rank": "337"
+                            "value": "12.0",
+                            "rank": "693"
                         },
                         {
                             "name": "Legend Specific 3",
-                            "value": "2,117",
-                            "rank": "3,215"
+                            "value": "5790.0",
+                            "rank": "9704"
                         }
                     ]
                 },
@@ -217,18 +206,29 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "210",
-                            "rank": "2,181"
+                            "value": "236.0",
+                            "rank": "4878"
                         },
                         {
                             "name": "Damage",
-                            "value": "55,033",
-                            "rank": "1,065"
+                            "value": "62252.0",
+                            "rank": "2581"
                         },
                         {
                             "name": "Legend Specific 2",
-                            "value": "607,100",
-                            "rank": "1,169"
+                            "value": "680177.0",
+                            "rank": "3762"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bloodhound",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-bloodhound.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "33.0",
+                            "rank": ""
                         }
                     ]
                 },
@@ -238,13 +238,13 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "13",
-                            "rank": "19,248"
+                            "value": "13.0",
+                            "rank": ""
                         },
                         {
                             "name": "Legend Specific 1",
-                            "value": "6",
-                            "rank": "2,701"
+                            "value": "6.0",
+                            "rank": "10114"
                         }
                     ]
                 }
@@ -544,7 +544,7 @@
     },
     {
         "id": "156343729723146240",
-        "nick": "PlagueDoctrr",
+        "nick": "\ud83d\udf0f\u2e38\ud835\uddeb\ud835\uddd7\ud835\uddda\ud835\uddeb\ud835\udddf\u0398\ud835\udde5\ud835\uddd7\u2e38\ud83d\udf0f",
         "origin": "",
         "strikes": 0,
         "stats": {}
@@ -725,7 +725,7 @@
     },
     {
         "id": "541266525106077726",
-        "nick": "UKZ x MURDERZZ",
+        "nick": "Matty",
         "origin": "",
         "strikes": 0,
         "stats": {}
@@ -743,9 +743,9 @@
         "origin": "ionkille",
         "strikes": 0,
         "stats": {
-            "level": "37",
-            "kills": "256",
-            "elo": "691",
+            "level": "54",
+            "kills": "435",
+            "elo": "805",
             "legends": [
                 {
                     "name": "Pathfinder",
@@ -753,8 +753,8 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "103",
-                            "rank": "6,378"
+                            "value": "154.0",
+                            "rank": "12515"
                         }
                     ]
                 },
@@ -764,13 +764,13 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "22",
-                            "rank": "24,057"
+                            "value": "22.0",
+                            "rank": ""
                         },
                         {
                             "name": "LMG Kills",
-                            "value": "4",
-                            "rank": "221"
+                            "value": "4.0",
+                            "rank": "895"
                         }
                     ]
                 },
@@ -780,8 +780,24 @@
                     "stats": [
                         {
                             "name": "Kills",
-                            "value": "131",
-                            "rank": "21,360"
+                            "value": "197.0",
+                            "rank": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Mirage",
+                    "thumbnail": "https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/legends-character-tiles/apex-grid-tile-legends-mirage.png.adapt.crop16x9.png",
+                    "stats": [
+                        {
+                            "name": "Kills",
+                            "value": "62.0",
+                            "rank": "31418"
+                        },
+                        {
+                            "name": "Legend Specific 1",
+                            "value": "130.0",
+                            "rank": "5187"
                         }
                     ]
                 }
@@ -985,7 +1001,7 @@
     },
     {
         "id": "500821507551920128",
-        "nick": "Coen",
+        "nick": "Coneraptor",
         "origin": "",
         "strikes": 0,
         "stats": {}
@@ -993,6 +1009,377 @@
     {
         "id": "363751917995687936",
         "nick": "Zetem00",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "194862247191904256",
+        "nick": "Skrunk",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "346779420435939329",
+        "nick": "SloveniaVip",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "405716520799567872",
+        "nick": "Aiki",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "148275001785712640",
+        "nick": "Warius",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "498857416759181312",
+        "nick": "Death",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "235202856620130304",
+        "nick": "Loli-king",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "203305396943847424",
+        "nick": "Uncle Gubsy",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "519759914705354773",
+        "nick": "PB Fox",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "491668626651480064",
+        "nick": "Chouxfleur\ud83e\udd66",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "294775861599797248",
+        "nick": "Dr PesPer",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "491556182331359233",
+        "nick": "nanstasiia",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "552759022084947970",
+        "nick": "joel1221",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "548428192872923146",
+        "nick": "Anastasiia",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "343798542587920384",
+        "nick": "kiezte",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "210385990114738177",
+        "nick": ".Unkwn.",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "398142064618897408",
+        "nick": "ky",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "507964226489548830",
+        "nick": "RoCs \ud83c\uddf1\ud83c\uddf9 sniper goust",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "184446362182483968",
+        "nick": "Brit0970",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "551321021425385483",
+        "nick": "I-Spontex_I",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "173738557389799425",
+        "nick": "Mukozuke",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "338141373460905987",
+        "nick": "jk47",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "435219781541691412",
+        "nick": "NightOwl",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "303012139843452928",
+        "nick": "jeremiah",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "545348541208461347",
+        "nick": "Pu$$ySlay3r",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "267325206022979585",
+        "nick": "DaPangKai",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "549311099238088705",
+        "nick": "{PRIVATE} Dan/Gary.",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "220218553679347712",
+        "nick": "evenkarke",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "548181631186370560",
+        "nick": "cmaccers95",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "273161291361681408",
+        "nick": "Cubey",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "295043993224347650",
+        "nick": "mannybigflex",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "206160009086763008",
+        "nick": "MysticLabs",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "410563703184818176",
+        "nick": "daanyal84",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "219559328955236353",
+        "nick": "RippedMuffin",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "298190125727350785",
+        "nick": "platdaddy",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "282535415305469952",
+        "nick": "[RO]Xeltran.Sashoo(cloudfang)",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "553536388260298762",
+        "nick": "M!ND C0NTR0L",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "171596846664253440",
+        "nick": "VNHL",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "286432385950547970",
+        "nick": "MrMaartenn",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "305686492439773186",
+        "nick": "themarez",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "231642027178196992",
+        "nick": "B4K3R",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "517263264485343232",
+        "nick": "mvdapig",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "545727756403605505",
+        "nick": "Silkblacklotus",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "276489536538935298",
+        "nick": "Jiggy",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "111881771968102400",
+        "nick": "Rubix",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "119860315172110337",
+        "nick": "Big J",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "552619054100250624",
+        "nick": "jiggy",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "257113408841711616",
+        "nick": "WinloCk4O4",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "347796222737645568",
+        "nick": "Mantis",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "462942235709800450",
+        "nick": "King_LC",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "548967765126676502",
+        "nick": "NekoNinja",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "212046988013862922",
+        "nick": "Magus",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "452874253562544128",
+        "nick": "Testaitis",
+        "origin": "",
+        "strikes": 0,
+        "stats": {}
+    },
+    {
+        "id": "238062726625099778",
+        "nick": "ausustin1",
         "origin": "",
         "strikes": 0,
         "stats": {}
