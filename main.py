@@ -81,18 +81,6 @@ async def update_ranks(mems):
         except KeyError: #User hasn't added stats
             continue
         rankedusers.append({"id": user["id"], "elo": elo})
-    
-    # for i in range(len(ranks)):
-    #     rank = ranks[i]
-    #     memranks = [r.id for r in mem.roles]
-    #     low = ranks[i-1][1] if i > 0 else 0 #Get the next elo down to prevent the bot from slowly ranking everyone up
-    #     if elo < rank[1] and elo > low and not rank[0] in memranks: #Ascending order, don't already have this rank
-    #         print("Making user "+mem.display_name+" rank "+discord.utils.get(server.roles, id=rank[0]).name)
-    #         for rid in [x[0] for x in ranks if x[0] in memranks]: #Every rank the user already has, will run when they change ranks
-    #             print("Removing rank "+discord.utils.get(server.roles, id=rid).name+" for "+mem.display_name)
-    #             await bot.remove_roles(mem, discord.utils.get(server.roles, id=rid))
-    #             await asyncio.sleep(0.15) #Smooth out the rate limiting
-    #         await bot.add_roles(mem, discord.utils.get(server.roles, id=rank[0]))
 
 async def users_update():
     global users
@@ -229,7 +217,10 @@ async def link(ctx, originuser):
 
 def calc_elo(level: int, kills: int):
     global elo_params
+    await log("Kills: "+str(kills)+" Level: "+str(level))
+    
     elo = (100*kills)/level
+    print("ELo: "+str(elo))
     #elo = (elo_params["offset"]*kills)/math.sqrt(elo_params["tilt"]*pow(level, elo_params["sag"]))
     return str(int(elo))
 
@@ -279,6 +270,7 @@ async def getsuggestions():
         embed.add_field(name=users[get_fromid(users, "id", sug["uid"])],
         value=sug["text"]+" | "+str(sug["up"])+" | "+str(sug["down"]), inline=False)
     await bot.say(embed=embed)
+    #TODO:
     #do embed things
     #Go through suggestions and sort
 
